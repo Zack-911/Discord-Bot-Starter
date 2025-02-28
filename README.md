@@ -20,7 +20,7 @@ Before you start creating your masterpiece, let’s set up your space:
 
    ```bash
    npm i https://github.com/tryforge/ForgeScript/tree/dev
-   npm i https://github.com/tryforge/forgedb/tree/dev
+   npm i github:tryforge/forgedb
    npm i dotenv
    ```
 

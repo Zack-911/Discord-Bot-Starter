@@ -10,7 +10,6 @@ const { ForgeDB } = require("@tryforge/forge.db");
 
 // ========== PATHS & CLIENT SETUP ==========
 // Define paths for your commands
-const slashCommandsPath = "src/Slash Commands";
 const prefixCommandsPath = "src/Prefix Commands";
 
 // ========== CLIENT CONFIGURATION ==========
@@ -30,7 +29,6 @@ const client = new ForgeClient({
 });
 
 // ========== LOAD COMMANDS ==========
-client.applicationCommands.load(slashCommandsPath);
 client.commands.load(prefixCommandsPath);
 
 // ========== LOGIN ==========

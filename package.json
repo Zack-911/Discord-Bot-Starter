@@ -1,0 +1,23 @@
+{
+  "name": "forgescript-starting-template",
+  "version": "0.0.0",
+  "description": "A starter template for forgescript made by zack911",
+  "keywords": [
+    "fs"
+  ],
+  "module": "commonjs",
+  "license": "ISC",
+  "author": "Zack-911",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "clear && node index.js"
+  },
+  "dependencies": {
+    "@tryforge/forge.db": "github:tryforge/forgedb",
+    "@tryforge/forgescript": "github:tryforge/ForgeScript#dev",
+    "chalk": "^5.4.1",
+    "dotenv": "^16.4.7",
+    "sqlite3": "^5.1.7"
+  }
+}

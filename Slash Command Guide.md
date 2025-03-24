@@ -212,3 +212,52 @@ $sendMessage[$channelID;Berk Likes Femboys]
 ```
 
 This is great for confirmations, errors, or anything that doesn’t need to be public.
+
+# 🧩 Advanced Slash Command Configuration
+
+ForgeScript supports advanced command customization using `config.json` files inside **subfolders** of your slash command directory.
+
+You can:
+
+- Add localizations
+- Set integration types
+- Define contexts
+- Control how sub-commands behave/install
+
+### 📁 Folder Structure Example
+
+```
+slashes (main folder)
+|
+|__ command
+    |
+    |__ subcommand-group
+        |
+        |__ config.json (config for "subcommand-group")
+        |__ subcommand.js
+    |
+    |__ config.json (config for "command")
+    |__ subcommand.js
+|
+|__ command.js
+```
+
+> ⚠️ **You cannot place a ********************`config.json`******************** file in the root ********************`slashes/`******************** folder!**
+
+### 📝 File Example (`config.json`)
+
+```json
+{
+  "name_localizations": { "de": "entwickler" },
+  "description": "Commands only accessible to the developer.",
+  "description_localizations": {
+    "de": "Befehle, auf die nur der Entwickler zugreifen kann."
+  },
+  "integration_types": [0, 1],
+  "contexts": [0, 1, 2]
+}
+```
+
+📎 [Read the full spec](https://discord.com/developers/docs/interactions/application-commands#application-command-object-application-command-structure) for more configurable options.
+
+> ⚠️ If you already use `config.json` in your slash folders, ensure it's a valid JSON object. Otherwise, ForgeScript may throw errors.
